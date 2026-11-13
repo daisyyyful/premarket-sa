@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Situational Awareness 11/9</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root { --paper:#F5F3EF; --card:#FFFFFF; --ink:#16140F; --soft:#4A463E; --mute:#8C8577; --line:#E3DED5; --accent:#56B0E0; --accent-ink:#2A7FB0; --tint:#E8F5FC;
+  --sans:"DM Sans","Helvetica Neue","Segoe UI",system-ui,sans-serif; --mono:"DM Mono","IBM Plex Mono",ui-monospace,Consolas,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; }
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+.masthead .eyebrow { margin-bottom: 14px; }
+h1 { font-weight: 700; font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.04; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.date { color: var(--mute); font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; margin-top: 10px; }
+.eyebrow { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); }
+.eyebrow::before { content: "— "; }
+.lead { margin: 36px 0 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; }
+.lead-text { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; margin: 10px 0 8px; }
+.lead-text .dot { color: var(--mute); font-weight: 400; }
+.lead-sub { font-family: var(--mono); font-size: .8rem; color: var(--soft); margin: 0; }
+p { margin: .6em 0; }
+.item { margin: 1.5em 0 .3em; }
+.label { font-family: var(--mono); font-size: .78rem; font-weight: 500; letter-spacing: .1em; color: var(--accent-ink); margin-right: .2em; }
+strong { font-weight: 700; }
+em { font-style: normal; }
+ul { margin: .3em 0 .6em; padding-left: 1.2em; } li { margin: .15em 0; } li::marker { color: var(--mute); }
+li > p { margin: 0; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+a:hover { border-bottom-color: var(--accent); }
+mark { background: var(--tint); color: var(--ink); font-weight: 600; padding: .05em .35em; border-radius: 4px; }
+hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0 8px; }
+h2.section { font-family: var(--mono); font-size: .74rem; font-weight: 400; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); margin: 48px 0 14px; }
+h2.section::before { content: "— "; }
+.tw { overflow-x: auto; margin: .6em 0 1em; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { text-align: left; vertical-align: top; padding: .55em .9em; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: none; }
+th { font-family: var(--mono); font-size: .68rem; font-weight: 400; text-transform: uppercase; letter-spacing: .14em; color: var(--mute); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.card td:last-child { min-width: 15em; }
+.card .tw { border: none; border-radius: 0; margin: .4em 0 .8em; background: transparent; }
+.card p strong:only-child { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+footer p { margin: .3em 0; } .credit { color: var(--soft); } footer a { color: inherit; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--mute); font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; }
+@media print { body { padding: 0; font-size: 10.5pt; } .wrap { max-width: none; } .lead, .card, .tw, table { break-inside: avoid; } h2.section { break-after: avoid; } a { border: none; } }
+</style></head><body>
+<div class="wrap"><header class="masthead"><div class="eyebrow">Pre-market brief</div><h1>Situational Awareness</h1><div class="date">Monday, November 9, 2026</div></header>
+<section class="lead"><div class="eyebrow">Regime</div><p class="lead-text">Bear <span class='dot'>·</span> day 2 under the 200 <span class='dot'>·</span> potential bounce day 2 <span class='dot'>·</span> bounce since Nov 5 (+1.4% since Nov 5)</p><p class="lead-sub">Pre-market at 8:31 AM ET (vs the Fri close): QQQ +0.8% · SPY +0.8% · IWM +1.3% · DJI (via DIA) +1.1% · VIX 23.34 at 8:31 AM (Fri close 25.63)</p></section>
+<p class="item"><span class="label">DRIVER</span><br />
+oil price pulling back, high vol in AI names after oversold</p>
+<p class="item"><span class="label">CHARACTER</span></p>
+<ul>
+<li>Vol high but falling into the bounce (QQQ −6.5% Thu → +1.4% Fri; VIX 28.2 Thu → 25.6 Fri → 23.3 early Mon)</li>
+<li>Responding well to good news (oil ↓ → indexes ↑), absorbing bad news (NVDA −5% on a +2.5% QQQ day)</li>
+<li>Earnings: growth OK but market wants guidance / ROI; no chasing (all earnings gappers ≥ 6.9% today were down: IONS, SOC, MNDY, OCUL)</li>
+<li>Rotation: FXI, ITB, IHI, XRT at 3M RS highs while QQQ is under the 200; test is whether they hold RS on today's bounce</li>
+</ul>
+<p class="item"><span class="label">THEMES</span></p>
+<ul>
+<li>ON: FXI (China large caps) ★, ITB (Homebuilders) ★, IHI (Medical devices) ★, XRT (Retail (EW)) ★, TAN (Solar), JETS (Airlines), GDX (Gold miners), MSOS (Cannabis)</li>
+<li>OFF: MEME (Meme stocks), HACK (Cybersecurity), IEO (Oil &amp; gas E&amp;P), FFTY (IBD 50 leaders), IGPT (AI &amp; next-gen software)</li>
+</ul>
+<p class="item"><span class="label">CATALYSTS</span> · no major US data today · next: CPI Tue 8:30 · 12 reporters over $20B today (see Earnings)</p>
+<hr class="rule">
+<p class="item"><span class="label">EXPOSURE</span> · <strong>Preservation mode · cash is king</strong></p>
+<p class="item"><span class="label">HUNTING</span> · <em>SOH</em></p>
+<p class="item"><span class="label">FOCUS</span> · <em>SOH</em></p>
+<p class="item"><span class="label">CURRENT POSITIONS</span> · <em>LLY, 75% position, INSM 100% position, NKE starter position for long term investment 100%, UNH starter position for long term investment 100%</em></p>
+<h2 class="section">Overnight headlines</h2>
+<ul>
+<li>Oil falls ~4% (Brent $94.20, WTI $87.51) after Trump says more strikes on Iran are "highly unlikely"; talks to end the conflict continue · <em><a href="https://www.tipranks.com/news/lower-oil-prices-lift-u-s-stocks-on-nov-9-traders-focus-on-cpi-data-and-ai-earnings" target="_blank" rel="noopener">TipRanks</a></em></li>
+<li>Nvidia lower pre-market: board opens an investigation into CEO Jensen Huang's relationship with a woman US intelligence says is a Chinese spy · <em><a href="https://bloomberg.com/news/articles/2026-11-09/s-p-500-futures-rise-as-oil-falls-nvidia-sinks-on-huang-affair" target="_blank" rel="noopener">Bloomberg</a></em></li>
+<li>AMD higher pre-market after Oppenheimer upgrades it to Buy · <em><a href="https://www.tipranks.com/news/lower-oil-prices-lift-u-s-stocks-on-nov-9-traders-focus-on-cpi-data-and-ai-earnings" target="_blank" rel="noopener">TipRanks</a></em></li>
+<li>AI debt worries hit CoreWeave, Nebius, IREN ahead of CRWV / NBIS / CSCO earnings this week; CPI Tue, PPI Fri · <em><a href="https://www.tipranks.com/news/lower-oil-prices-lift-u-s-stocks-on-nov-9-traders-focus-on-cpi-data-and-ai-earnings" target="_blank" rel="noopener">TipRanks</a></em></li>
+</ul>
+<h2 class="section">Economic calendar · high importance (ET)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Event</th>
+<th>Actual</th>
+<th>Forecast</th>
+<th>Previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tue Nov 10</td>
+<td>8:30</td>
+<td>CPI MoM</td>
+<td>–</td>
+<td>0.3%</td>
+<td>0.6%</td>
+</tr>
+<tr>
+<td>Tue Nov 10</td>
+<td>8:30</td>
+<td>CPI YoY</td>
+<td>–</td>
+<td>3.9%</td>
+<td>3.7%</td>
+</tr>
+<tr>
+<td>Tue Nov 10</td>
+<td>8:30</td>
+<td>Core CPI MoM</td>
+<td>–</td>
+<td>0.2%</td>
+<td>0.3%</td>
+</tr>
+<tr>
+<td>Tue Nov 10</td>
+<td>8:30</td>
+<td>Core CPI YoY</td>
+<td>–</td>
+<td>2.8%</td>
+<td>2.6%</td>
+</tr>
+<tr>
+<td>Thu Nov 12</td>
+<td>10:00</td>
+<td>Existing Home Sales</td>
+<td>–</td>
+<td>3.85M</td>
+<td>3.99M</td>
+</tr>
+<tr>
+<td>Fri Nov 13</td>
+<td>8:30</td>
+<td>PPI MoM</td>
+<td>–</td>
+<td>0.4%</td>
+<td>1.3%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="section">Earnings today · 137 reporting (market cap ≥ $300M; <mark>highlighted</mark> = over $20B)</h2>
+<ul>
+<li><strong>Before the open, already reported (34):</strong> <mark>CEG $92B</mark> · <mark>KKR $88B</mark> · <mark>FERG $50B</mark> · <mark>IX $36B</mark> · <mark>ROIV $29B</mark> · NRG, RBA, AMG, TGTX, PRAX, IMVT, IONS, MNDY +21 more</li>
+<li><strong>Before the open, not out yet (15):</strong> <mark>B $67B</mark> · KSPI, SGI, CNH, AAON, KGS, TKC, GCMG, NESR +6 more</li>
+<li><strong>After the close (76):</strong> <mark>OXY $56B</mark> · <mark>TTWO $40B</mark> · <mark>RKLB $32B</mark> · <mark>BAP $28B</mark> · EQX, JBS, ASTS, LINE, TIMB, ONTO, ZETA, SANM +64 more</li>
+<li><strong>Time not set (12):</strong> <mark>SKYD $40B</mark> · <mark>CIB $24B</mark> · WTM, DAC, KMPR, KMPB, DRVN, CEPU +4 more</li>
+</ul>
+<p><strong>Reported this morning, over $20B · headline</strong></p>
+<ul>
+<li><strong>CEG</strong> · <a href="https://www.tradingview.com/news/DJN_DN20261109004640:0-data-center-moratoriums-they-aren-t-showing-up-in-constellation-energy-s-guidance-barrons-com/" target="_blank" rel="noopener">Data-Center Moratoriums? They Aren't Showing Up in Constellation Energy's Guidance. — Barrons.com</a></li>
+<li><strong>KKR</strong> · <a href="https://www.tradingview.com/news/sharecast:bad64131c094b:0-third-quarter-earnings-beat-forecasts-at-kkr/" target="_blank" rel="noopener">Third-quarter earnings beat forecasts at KKR</a></li>
+<li><strong>FERG</strong> · <a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:4247519:0-ferg-q3-sales-rose-9-5-as-organic-growth-and-acquisitions-lifted-adjusted-eps-7-9/" target="_blank" rel="noopener">FERG: Q3 sales rose 9.5% as organic growth and acquisitions lifted adjusted EPS 7.9%</a></li>
+<li><strong>IX</strong> · <a href="https://www.tradingview.com/news/urn:summary_document_transcript:quartr.com:4535977:0-orix-record-first-half-earnings-were-driven-by-kioxia-gains-amid-substantial-share-price-and-outlook-uncertainty/" target="_blank" rel="noopener">ORIX: Record first-half earnings were driven by KIOXIA gains, amid substantial share-price and outlook uncert…</a></li>
+<li><strong>ROIV</strong> · <a href="https://www.tradingview.com/news/urn:summary_document_report:quartr.com:4538323:0-roiv-lisraya-launched-strongly-as-pipeline-results-advanced-and-liquidity-reached-4-2-billion/" target="_blank" rel="noopener">ROIV: LISRAYA launched strongly as pipeline results advanced and liquidity reached $4.2 billion</a></li>
+</ul>
+<p><strong>Rest of the week</strong> (largest first)</p>
+<ul>
+<li>Tue Nov 10 (90): PBR, TDG, SE, ALC, VOD, EC, VG, CRWV +82 more</li>
+<li>Wed Nov 11 (63): FNV, VYLR, HMC, GIB, ASND, TTEK, CAE, CTVA +55 more</li>
+<li>Thu Nov 12 (101): CSCO, AMAT, BN, NTES, ROST, NU, NBIS, WSM +93 more</li>
+<li>Fri Nov 13 (14): MUFG, SMFG, MFG, ASST, SATA, SATS, BKE, RLX +6 more</li>
+</ul>
+<h2 class="section">Pre-market movers · 3 up / 6 down</h2>
+<section class="card"><div class="eyebrow">±6.9%+, pre-market vol ≥ 100K, market cap ≥ $300M · data 8:31 AM ET</div><p><strong>Up</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Pre-mkt chg</th>
+<th>Pre-mkt vol</th>
+<th>Mkt cap</th>
+<th>Industry</th>
+<th>Earnings?</th>
+<th>Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFR</td>
+<td>+38.6%</td>
+<td>1.2M</td>
+<td>$1.3B</td>
+<td>Integrated Oil</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/seekingalpha:796ad3111094b:0-strathcona-resources-to-buy-greenfire-resources-in-cash-and-stock-deal-up-to-c-2-9b/" target="_blank" rel="noopener">Strathcona Resources to buy Greenfire Resources in cash-and-stock deal up to C$2.9B</a></td>
+</tr>
+<tr>
+<td>DDI</td>
+<td>+16.7%</td>
+<td>221K</td>
+<td>$0.7B</td>
+<td>Packaged Software</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/seekingalpha:8a0a9b57b094b:0-doubledown-soars-after-acquisition-offer-from-doubleu-games/" target="_blank" rel="noopener">DoubleDown soars after acquisition offer from DoubleU Games</a></td>
+</tr>
+<tr>
+<td>VIR</td>
+<td>+8.9%</td>
+<td>315K</td>
+<td>$2.1B</td>
+<td>Biotechnology</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/seekingalpha:ad9ce61ae094b:0-vir-biotechnology-shares-rise-on-hepatitis-d-therapy-data/" target="_blank" rel="noopener">Vir Biotechnology shares rise on hepatitis D therapy data</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Down</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Pre-mkt chg</th>
+<th>Pre-mkt vol</th>
+<th>Mkt cap</th>
+<th>Industry</th>
+<th>Earnings?</th>
+<th>Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZURA</td>
+<td>-68.7%</td>
+<td>5.5M</td>
+<td>$0.4B</td>
+<td>Biotechnology</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46Q0V5:0-zura-bio-s-skin-disease-drug-fails-mid-stage-trial/" target="_blank" rel="noopener">Zura Bio's skin disease drug fails mid-stage trial</a></td>
+</tr>
+<tr>
+<td>SOC</td>
+<td>-60.1%</td>
+<td>2.6M</td>
+<td>$0.4B</td>
+<td>Integrated Oil</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/urn:summary_document_report:quartr.com:4538394:0-soc-net-sales-volumes-climbed-29-qoq-as-platform-hondo-targeted-a-december-restart/" target="_blank" rel="noopener">SOC: Net sales volumes climbed 29% QoQ as Platform Hondo targeted a December restart</a></td>
+</tr>
+<tr>
+<td>IONS</td>
+<td>-20.7%</td>
+<td>241K</td>
+<td>$6.6B</td>
+<td>Pharmaceuticals: Major</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:4258933:0-ions-revenue-reached-757m-ytd-as-tryngolza-guidance-fell-and-pipeline-results-diverged/" target="_blank" rel="noopener">IONS: Revenue reached $757M YTD as TRYNGOLZA guidance fell and pipeline results diverged</a></td>
+</tr>
+<tr>
+<td>IBRX</td>
+<td>-12.8%</td>
+<td>1.5M</td>
+<td>$9.2B</td>
+<td>Pharmaceuticals: Major</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/stocktwits:3bf8a596c094b:0-ibrx-stock-crashes-to-near-9-month-lows-on-q3-earnings-miss-retail-says-no-way-to-escape-further-dilution/" target="_blank" rel="noopener">IBRX Stock Crashes To Near 9-Month Lows On Q3 Earnings Miss – Retail Says No Way To Escape Further Dilution</a></td>
+</tr>
+<tr>
+<td>OCUL</td>
+<td>-8.0%</td>
+<td>100K</td>
+<td>$1.4B</td>
+<td>Pharmaceuticals: Major</td>
+<td>earnings</td>
+<td>—</td>
+</tr>
+<tr>
+<td>MNDY</td>
+<td>-7.4%</td>
+<td>147K</td>
+<td>$3.7B</td>
+<td>Packaged Software</td>
+<td>earnings</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div></section>
+<footer><p class="credit">Inspired by Stockbee (<a href="https://x.com/PradeepBonde" target="_blank" rel="noopener">@PradeepBonde</a>), J Law (<a href="https://x.com/JLawStock" target="_blank" rel="noopener">@JLawStock</a>), Jeff Sun (<a href="https://x.com/jfsrev" target="_blank" rel="noopener">@jfsrev</a>) and Clement Ang (<a href="https://x.com/Clement_Ang17" target="_blank" rel="noopener">@Clement_Ang17</a>)</p><p>Data: Massive (daily prices: phase, bounce, themes) · TradingView (pre-market quotes, calendar, earnings, stock news) · overnight headlines from the linked sources · Informational only, not investment advice.</p></footer></div>
+</body></html>

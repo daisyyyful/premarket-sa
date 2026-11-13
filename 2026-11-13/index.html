@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Situational Awareness 11/13</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root { --paper:#F5F3EF; --card:#FFFFFF; --ink:#16140F; --soft:#4A463E; --mute:#8C8577; --line:#E3DED5; --accent:#56B0E0; --accent-ink:#2A7FB0; --tint:#E8F5FC;
+  --sans:"DM Sans","Helvetica Neue","Segoe UI",system-ui,sans-serif; --mono:"DM Mono","IBM Plex Mono",ui-monospace,Consolas,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; }
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+img.chart { max-width: 100%; height: auto; display: block; margin: 8px 0 14px; border-radius: 6px; }
+.masthead .eyebrow { margin-bottom: 14px; }
+h1 { font-weight: 700; font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.04; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.date { color: var(--mute); font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; margin-top: 10px; }
+.eyebrow { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); }
+.eyebrow::before { content: "— "; }
+.lead { margin: 36px 0 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; }
+.lead-text { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; margin: 10px 0 8px; }
+.lead-text .dot { color: var(--mute); font-weight: 400; }
+.lead-sub { font-family: var(--mono); font-size: .8rem; color: var(--soft); margin: 0; }
+p { margin: .6em 0; }
+.item { margin: 1.5em 0 .3em; }
+.label { font-family: var(--mono); font-size: .78rem; font-weight: 500; letter-spacing: .1em; color: var(--accent-ink); margin-right: .2em; }
+strong { font-weight: 700; }
+em { font-style: normal; }
+ul { margin: .3em 0 .6em; padding-left: 1.2em; } li { margin: .15em 0; } li::marker { color: var(--mute); }
+li > p { margin: 0; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+a:hover { border-bottom-color: var(--accent); }
+mark { background: var(--tint); color: var(--ink); font-weight: 600; padding: .05em .35em; border-radius: 4px; }
+hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0 8px; }
+h2.section { font-family: var(--mono); font-size: .74rem; font-weight: 400; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); margin: 48px 0 14px; }
+h2.section::before { content: "— "; }
+.tw { overflow-x: auto; margin: .6em 0 1em; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { text-align: left; vertical-align: top; padding: .55em .9em; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: none; }
+th { font-family: var(--mono); font-size: .68rem; font-weight: 400; text-transform: uppercase; letter-spacing: .14em; color: var(--mute); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.card td:last-child { min-width: 15em; }
+.card .tw { border: none; border-radius: 0; margin: .4em 0 .8em; background: transparent; }
+.card p strong:only-child { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+.focus-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin: 28px 0 2px; }
+footer p { margin: .3em 0; } .credit { color: var(--soft); } footer a { color: inherit; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--mute); font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; }
+@media print { body { padding: 0; font-size: 10.5pt; } .wrap { max-width: none; } .lead, .card, .tw, table { break-inside: avoid; } h2.section { break-after: avoid; } a { border: none; } }
+</style></head><body>
+<div class="wrap"><header class="masthead"><div class="eyebrow">Pre-market brief</div><h1>Situational Awareness</h1><div class="date">Friday, November 13, 2026</div></header>
+<section class="lead"><div class="eyebrow">Regime</div><p class="lead-text">QQQ Bear <span class='dot'>·</span> day 6 <span class='dot'>·</span> back above the 200, close 2 of 3 <span class='dot'>·</span> potential bounce day 6 <span class='dot'>·</span> bounce since Nov 5 (+6.4% since Nov 5)</p><p class="lead-sub">Other indexes: SPY Correction · IWM Bear · DJI Choppy / Neutral</p><p class="lead-sub">Pre-market at 9:30 AM ET (vs the Thu close): QQQ +0.1% · SPY +0.4% · IWM +0.2% · DJI (via DIA) +0.4% · VIX 18.78 at 9:30 AM (Thu close 18.69)</p></section>
+<p class="item"><span class="label">DRIVER</span><br />
+PPI better than feared, but already at a high level; yesterday NVDA gap down got bought and QQQ held; opinion leans towards neutral although still in bear market phase (QQQ)</p>
+<p class="item"><span class="label">CHARACTER</span></p>
+<ul>
+<li>ignores bad news</li>
+<li>earnings season<ul>
+<li><em>this earnings season almost comes to an end</em></li>
+<li>*punish high capex / negative cash flow</li>
+<li>does EP have follow through: <em>to be studied</em></li>
+</ul>
+</li>
+</ul>
+<p class="item"><span class="label">THEMES</span></p>
+<ul>
+<li>ON: JETS (Airlines), IHI (Medical devices), OZEM (GLP-1 &amp; weight loss), TAN (Solar), FXI (China large caps)</li>
+<li>OFF: SMH (Semiconductors), WGMI (Bitcoin miners), IBIT (Bitcoin), FFTY (IBD 50 leaders), MEME (Meme stocks)</li>
+</ul>
+<p class="item"><span class="label">CATALYSTS</span> · PPI MoM 8:30 · 5 reporters over $20B today (see Earnings)</p>
+<hr class="rule">
+<p class="item"><span class="label">EXPOSURE</span> · <strong>Preservation mode · cash is king</strong></p>
+<p class="item"><span class="label">HUNTING</span><br />
+SOH</p>
+<p class="item"><span class="label">FOCUS</span> · SOH</p>
+<p class="item"><span class="label">CURRENT POSITIONS</span><br />
+LLY 75% remaining, INSM 2/3 remaining, NKE 100% remaining, UNH 100% remaining</p>
+<h2 class="section">Overnight headlines · since the Thu close</h2>
+<ul>
+<li>October PPI +0.3% m/m vs +0.4% expected - but the hottest annual PPI in nearly four years · <em><a href="https://www.cnbc.com/investingclub/2026/11/13/jim-cramers-top-10-things-to-watch-in-the-stock-market-friday.html" target="_blank" rel="noopener">CNBC</a></em></li>
+<li>Cisco Q1 FY27 revenue $18.5B vs $18.14B est, adj. EPS $1.40 vs $1.33, full-year outlook raised; shares lower pre-market · <em><a href="https://finance.yahoo.com/markets/stocks/articles/futures-edge-lower-nvda-fallout-110121361.html" target="_blank" rel="noopener">Yahoo Finance</a></em></li>
+<li>Applied Materials Q4 adj. EPS $4.16, revenue $10.41B (+53%); Q1 revenue guide ~$11.1B ± $0.5B vs $10.89B est · <em><a href="https://uk.finance.yahoo.com/news/us-futures-slip-nvidia-leadership-095547080.html" target="_blank" rel="noopener">Yahoo Finance UK</a></em></li>
+<li>Cerebras (CBRS) up ~12% pre-market on a revenue and guidance beat plus a new Microsoft deal · <em><a href="https://uk.investing.com/news/stock-market-news/us-stock-futures-rise-after-nvidia-ceo-exit-spooks-wall-st-4979339" target="_blank" rel="noopener">Investing.com</a></em></li>
+<li>Microsoft down ~2.6% pre-market as a global outage disrupts Outlook and Teams · <em><a href="https://invezz.com/news/2026/11/13/us-stock-futures-today-nvidia-microsoft-ppi-november-13/" target="_blank" rel="noopener">Invezz</a></em></li>
+<li>Nvidia +2% pre-market after falling 4% Thursday on Huang's resignation; NVDA reports Nov 17 · <em><a href="https://www.cnbc.com/investingclub/2026/11/13/jim-cramers-top-10-things-to-watch-in-the-stock-market-friday.html" target="_blank" rel="noopener">CNBC / Invezz</a></em></li>
+</ul>
+<h2 class="section">Economic calendar · high importance (ET)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Event</th>
+<th>Actual</th>
+<th>Forecast</th>
+<th>Previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fri Nov 13</td>
+<td>8:30</td>
+<td>PPI MoM</td>
+<td><strong>0.3%</strong></td>
+<td>0.4%</td>
+<td>1.4%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="section">Earnings today · 33 reporting (market cap ≥ $300M; <mark>highlighted</mark> = over $20B)</h2>
+<ul>
+<li><strong>After the Thu close, reported (41):</strong> <mark>CSCO $397B</mark> · <mark>AMAT $314B</mark> · <mark>NU $60B</mark> · <mark>CBRS $23B</mark> · DDS, STN, ELPC, ANDG, ARWR, CIG, HTFL, TEO +29 more</li>
+<li><strong>Before the open, already reported (11):</strong> <mark>MUFG $246B</mark> · <mark>SMFG $155B</mark> · <mark>MFG $123B</mark> · <mark>EC $32B</mark> · SA, GHRS, HSLV, SBC, IMMX, RMIX, CTGO</li>
+<li><strong>Before the open, not out yet (2):</strong> USAS, SGML</li>
+<li><strong>After the close (0):</strong> none</li>
+<li><strong>Time not set (20):</strong> <mark>WSM $29B</mark> · FRHC, NIO, M, GGAL, BRC, SKE +13 more</li>
+</ul>
+<p><strong>Reported since the last close, over $20B · headline</strong></p>
+<ul>
+<li><strong>CSCO</strong> · <a href="https://www.tradingview.com/news/seekingalpha:5c13fb9aa094b:0-cisco-s-networking-super-cycle-drives-growth-efficiencies-push-up-operating-margin-analysts/" target="_blank" rel="noopener">Cisco's 'networking super-cycle' drives growth; efficiencies push up operating margin: analysts</a></li>
+<li><strong>AMAT</strong> · —</li>
+<li><strong>NU</strong> · —</li>
+<li><strong>CBRS</strong> · <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L6N46U0R8:0-cerebras-shares-surge-as-forecast-raise-surprise-profit-ease-ai-spending-worries/" target="_blank" rel="noopener">Cerebras shares surge as forecast raise, surprise profit ease AI spending worries</a></li>
+<li><strong>MUFG</strong> · <a href="https://www.tradingview.com/news/DJN_DN20261113001977:0-mitsubishi-ufj-posts-first-half-profit-beat-raises-annual-target/" target="_blank" rel="noopener">Mitsubishi UFJ Posts First-Half Profit Beat, Raises Annual Target</a></li>
+<li><strong>SMFG</strong> · <a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:4245360:0-sumitomo-mitsui-financial-group-record-1h-net-income-lifts-fy-guidance-to-jpy-1-9tn-and-buybacks-to-jpy-400bn/" target="_blank" rel="noopener">Sumitomo Mitsui Financial Group: Record 1H net income lifts FY guidance to JPY 1.9tn and buybacks to JPY 400bn</a></li>
+<li><strong>MFG</strong> · <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L6N46U07F:0-mizuho-books-19-rise-in-second-quarter-net-profit-raises-annual-forecast/" target="_blank" rel="noopener">Mizuho books 19% rise in second-quarter net profit, raises annual forecast</a></li>
+<li><strong>EC</strong> · <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L6N46T1GP:0-colombia-ecopetrol-s-net-profit-jumps-86-in-q3/" target="_blank" rel="noopener">Colombia Ecopetrol's net profit jumps 86% in Q3</a></li>
+</ul>
+<p><strong>Rest of the week</strong> (largest first)</p>
+<footer><p class="credit">Inspired by Stockbee (<a href="https://x.com/PradeepBonde" target="_blank" rel="noopener">@PradeepBonde</a>), J Law (<a href="https://x.com/JLawStock" target="_blank" rel="noopener">@JLawStock</a>), Jeff Sun (<a href="https://x.com/jfsrev" target="_blank" rel="noopener">@jfsrev</a>) and Clement Ang (<a href="https://x.com/Clement_Ang17" target="_blank" rel="noopener">@Clement_Ang17</a>)</p><p>Data: Massive (daily prices: phase, bounce, themes) · TradingView (pre-market quotes, calendar, earnings, stock news) · overnight headlines from the linked sources · Informational only, not investment advice.</p></footer></div>
+</body></html>

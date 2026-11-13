@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Situational Awareness 11/12</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root { --paper:#F5F3EF; --card:#FFFFFF; --ink:#16140F; --soft:#4A463E; --mute:#8C8577; --line:#E3DED5; --accent:#56B0E0; --accent-ink:#2A7FB0; --tint:#E8F5FC;
+  --sans:"DM Sans","Helvetica Neue","Segoe UI",system-ui,sans-serif; --mono:"DM Mono","IBM Plex Mono",ui-monospace,Consolas,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; }
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+img.chart { max-width: 100%; height: auto; display: block; margin: 8px 0 14px; border-radius: 6px; }
+.masthead .eyebrow { margin-bottom: 14px; }
+h1 { font-weight: 700; font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.04; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.date { color: var(--mute); font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; margin-top: 10px; }
+.eyebrow { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); }
+.eyebrow::before { content: "— "; }
+.lead { margin: 36px 0 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; }
+.lead-text { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; margin: 10px 0 8px; }
+.lead-text .dot { color: var(--mute); font-weight: 400; }
+.lead-sub { font-family: var(--mono); font-size: .8rem; color: var(--soft); margin: 0; }
+p { margin: .6em 0; }
+.item { margin: 1.5em 0 .3em; }
+.label { font-family: var(--mono); font-size: .78rem; font-weight: 500; letter-spacing: .1em; color: var(--accent-ink); margin-right: .2em; }
+strong { font-weight: 700; }
+em { font-style: normal; }
+ul { margin: .3em 0 .6em; padding-left: 1.2em; } li { margin: .15em 0; } li::marker { color: var(--mute); }
+li > p { margin: 0; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+a:hover { border-bottom-color: var(--accent); }
+mark { background: var(--tint); color: var(--ink); font-weight: 600; padding: .05em .35em; border-radius: 4px; }
+hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0 8px; }
+h2.section { font-family: var(--mono); font-size: .74rem; font-weight: 400; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); margin: 48px 0 14px; }
+h2.section::before { content: "— "; }
+.tw { overflow-x: auto; margin: .6em 0 1em; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { text-align: left; vertical-align: top; padding: .55em .9em; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: none; }
+th { font-family: var(--mono); font-size: .68rem; font-weight: 400; text-transform: uppercase; letter-spacing: .14em; color: var(--mute); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.card td:last-child { min-width: 15em; }
+.card .tw { border: none; border-radius: 0; margin: .4em 0 .8em; background: transparent; }
+.card p strong:only-child { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+.focus-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin: 28px 0 2px; }
+footer p { margin: .3em 0; } .credit { color: var(--soft); } footer a { color: inherit; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--mute); font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; }
+@media print { body { padding: 0; font-size: 10.5pt; } .wrap { max-width: none; } .lead, .card, .tw, table { break-inside: avoid; } h2.section { break-after: avoid; } a { border: none; } }
+</style></head><body>
+<div class="wrap"><header class="masthead"><div class="eyebrow">Pre-market brief</div><h1>Situational Awareness</h1><div class="date">Thursday, November 12, 2026</div></header>
+<section class="lead"><div class="eyebrow">Regime</div><p class="lead-text">QQQ Bear <span class='dot'>·</span> day 5 <span class='dot'>·</span> back above the 200, close 1 of 3 <span class='dot'>·</span> potential bounce day 5 <span class='dot'>·</span> bounce since Nov 5 (+6.7% since Nov 5)</p><p class="lead-sub">Other indexes: SPY Correction · IWM Choppy / Neutral · DJI Choppy / Neutral</p><p class="lead-sub">Pre-market at 9:30 AM ET (vs the Wed close): QQQ -1.4% · SPY -0.8% · IWM -0.6% · DJI (via DIA) -0.0% · VIX 18.36 at 9:30 AM (Wed close 17.48)</p></section>
+<p class="item"><span class="label">DRIVER</span><br />
+oil price around 87s, geopolitical tension easing, earnings seasons wrapping up, maybe trading on economic events that affect rate hike decisions; but this week market didn't react big on CPI release; Jensen Huang resigning as NVDA CEO (CFO Colette Kress is interim CEO while the board searches) is NVDA-specific news, but may drag QQQ given it's market size, not sure about the effect on SMH stocks or the broader market; judging from premarket, Mag7 not impacted, semi stocks / related AI stocks (like neocloud) is down with NVDA except AVGO and AMD</p>
+<p class="item"><span class="label">CHARACTER</span></p>
+<ul>
+<li><em>so far react negatively to NVDA bad news</em><ul>
+<li><em>earnings: more down than up from earnings reaction today, need to note NBIS lowered guidance?</em></li>
+<li><em>punish high capex / negative cash flow?</em></li>
+<li><em>to be studied</em></li>
+</ul>
+</li>
+</ul>
+<p class="item"><span class="label">THEMES</span></p>
+<ul>
+<li>ON: ITB (Homebuilders) ★, XRT (Retail (EW)) ★, IHI (Medical devices) ★, FXI (China large caps) ★, JETS (Airlines), TAN (Solar), OZEM (GLP-1 &amp; weight loss)</li>
+<li>OFF: SMH (Semiconductors), FFTY (IBD 50 leaders), WGMI (Bitcoin miners), MEME (Meme stocks), IGPT (AI &amp; next-gen software)</li>
+</ul>
+<p class="item"><span class="label">CATALYSTS</span> · Existing Home Sales 10:00 · next: PPI Fri 8:30 · 8 reporters over $20B today (see Earnings)</p>
+<hr class="rule">
+<p class="item"><span class="label">EXPOSURE</span> · <strong>Preservation mode · cash is king</strong></p>
+<p class="item"><span class="label">HUNTING</span><br />
+<strong>FOCUS</strong> · SOH</p>
+<p class="item"><span class="label">CURRENT POSITIONS</span><br />
+<em>LLY 75% remaining, INSM 100% remaining, UNH starter 100% remaining, NKE starter 100% remaining</em></p>
+<h2 class="section">Overnight headlines · since the Wed close</h2>
+<ul>
+<li>Nvidia CEO Jensen Huang resigns; CFO Colette Kress named interim CEO while the board searches for a permanent successor; NVDA ~−10% pre-market · <em><a href="https://www.tradingview.com/news/DJN_DN20261111009007:0-nvidia-ceo-jensen-huang-resigns-barrons-com/" target="_blank" rel="noopener">Barron's / Dow Jones (via TradingView)</a></em></li>
+<li>Before the resignation: Bernstein cut NVDA to Market Perform (PT $400 → $200), Baird to Neutral (PT $500 → $200) · <em><a href="https://optionsoracle.substack.com/p/nvidias-board-holds-the-markets-attention" target="_blank" rel="noopener">Options Oracle</a></em></li>
+<li>Nebius beat on revenue but lowered its outlook (2026 revenue at low end of $3.0–3.4B, capex raised to $27B); stock ~−20% pre-market · <em><a href="https://optionsoracle.substack.com/p/nvidias-board-holds-the-markets-attention" target="_blank" rel="noopener">Options Oracle</a></em></li>
+<li>CoreWeave gives back part of Wednesday's ~25% jump (~−14% pre-market); AI names (SMCI, SNDK, COHR, AXTI) lower · <em><a href="https://sg.finance.yahoo.com/news/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html" target="_blank" rel="noopener">Yahoo Finance</a></em></li>
+<li>10-year Treasury yield back near 5% as the bond market reopens after Veterans Day · <em><a href="https://optionsoracle.substack.com/p/nvidias-board-holds-the-markets-attention" target="_blank" rel="noopener">Options Oracle</a></em></li>
+<li>Today: jobless claims 8:30; Cisco and Applied Materials report after the close; PPI Friday 8:30 · <em><a href="https://spxgammaedge.substack.com/p/premarket-report-6b6" target="_blank" rel="noopener">SPX Gamma Edge</a></em></li>
+</ul>
+<h2 class="section">Economic calendar · high importance (ET)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Event</th>
+<th>Actual</th>
+<th>Forecast</th>
+<th>Previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thu Nov 12</td>
+<td>10:00</td>
+<td>Existing Home Sales</td>
+<td>–</td>
+<td>3.85M</td>
+<td>3.99M</td>
+</tr>
+<tr>
+<td>Fri Nov 13</td>
+<td>8:30</td>
+<td>PPI MoM</td>
+<td>–</td>
+<td>0.4%</td>
+<td>1.3%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="section">Earnings today · 136 reporting (market cap ≥ $300M; <mark>highlighted</mark> = over $20B)</h2>
+<ul>
+<li><strong>After the Wed close, reported (23):</strong> <mark>FNV $49B</mark> · <mark>VYLR $48B</mark> · TTEK, CAE, CTVA, OR, UGP, ENS, ECO, DGII +13 more</li>
+<li><strong>Before the open, already reported (43):</strong> <mark>NBIS $42B</mark> · TWST, FPS, NIQ, MBGL, OCTV, MWH, FIGR, DPC +34 more</li>
+<li><strong>Before the open, not out yet (16):</strong> <mark>BN $103B</mark> · ASND, HBM, AYA, CLBT, ARCO, AIIR, TBN, AZUL +7 more</li>
+<li><strong>After the close (41):</strong> <mark>CSCO $397B</mark> · <mark>AMAT $314B</mark> · <mark>NU $60B</mark> · <mark>EC $32B</mark> · <mark>CBRS $23B</mark> · DDS, STN, ELPC, ANDG, ARWR, CIG, HTFL, DLO +28 more</li>
+<li><strong>Time not set (36):</strong> <mark>WSM $31B</mark> · KEP, FRHC, NIO, KOD, M, ERAS +29 more</li>
+</ul>
+<p><strong>Reported since the last close, over $20B · headline</strong></p>
+<ul>
+<li><strong>FNV</strong> · <a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:4252216:0-fnv-q3-revenue-and-adjusted-earnings-grew-as-revised-guidance-and-mine-expansions-supported-growth-plans/" target="_blank" rel="noopener">FNV: Q3 revenue and adjusted earnings grew as revised guidance and mine expansions supported growth plans</a></li>
+<li><strong>VYLR</strong> · <a href="https://www.tradingview.com/news/urn:summary_document_report:quartr.com:4229379:0-vylr-ytd-growth-sustains-fy26-guidance-amid-q3-weather-driven-volume-pressure/" target="_blank" rel="noopener">VYLR: YTD growth sustains FY26 guidance amid Q3 weather-driven volume pressure</a></li>
+<li><strong>NBIS</strong> · <a href="https://www.tradingview.com/news/DJN_DN20261112008918:0-nebius-lowers-fiscal-year-outlook-addresses-worries-over-financing-ai-buildout/" target="_blank" rel="noopener">Nebius Lowers Fiscal Year Outlook, Addresses Worries Over Financing AI Buildout</a></li>
+</ul>
+<p><strong>Rest of the week</strong> (largest first)</p>
+<ul>
+<li>Fri Nov 13 (10): MUFG, SMFG, MFG, ACCV, INBX, USAS, RMIX, SGML +2 more</li>
+</ul>
+<footer><p class="credit">Inspired by Stockbee (<a href="https://x.com/PradeepBonde" target="_blank" rel="noopener">@PradeepBonde</a>), J Law (<a href="https://x.com/JLawStock" target="_blank" rel="noopener">@JLawStock</a>), Jeff Sun (<a href="https://x.com/jfsrev" target="_blank" rel="noopener">@jfsrev</a>) and Clement Ang (<a href="https://x.com/Clement_Ang17" target="_blank" rel="noopener">@Clement_Ang17</a>)</p><p>Data: Massive (daily prices: phase, bounce, themes) · TradingView (pre-market quotes, calendar, earnings, stock news) · overnight headlines from the linked sources · Informational only, not investment advice.</p></footer></div>
+</body></html>
