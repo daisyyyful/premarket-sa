@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Situational Awareness 11/11</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root { --paper:#F5F3EF; --card:#FFFFFF; --ink:#16140F; --soft:#4A463E; --mute:#8C8577; --line:#E3DED5; --accent:#56B0E0; --accent-ink:#2A7FB0; --tint:#E8F5FC;
+  --sans:"DM Sans","Helvetica Neue","Segoe UI",system-ui,sans-serif; --mono:"DM Mono","IBM Plex Mono",ui-monospace,Consolas,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; }
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+.masthead .eyebrow { margin-bottom: 14px; }
+h1 { font-weight: 700; font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.04; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.date { color: var(--mute); font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; margin-top: 10px; }
+.eyebrow { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); }
+.eyebrow::before { content: "— "; }
+.lead { margin: 36px 0 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; }
+.lead-text { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; margin: 10px 0 8px; }
+.lead-text .dot { color: var(--mute); font-weight: 400; }
+.lead-sub { font-family: var(--mono); font-size: .8rem; color: var(--soft); margin: 0; }
+p { margin: .6em 0; }
+.item { margin: 1.5em 0 .3em; }
+.label { font-family: var(--mono); font-size: .78rem; font-weight: 500; letter-spacing: .1em; color: var(--accent-ink); margin-right: .2em; }
+strong { font-weight: 700; }
+em { font-style: normal; }
+ul { margin: .3em 0 .6em; padding-left: 1.2em; } li { margin: .15em 0; } li::marker { color: var(--mute); }
+li > p { margin: 0; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+a:hover { border-bottom-color: var(--accent); }
+mark { background: var(--tint); color: var(--ink); font-weight: 600; padding: .05em .35em; border-radius: 4px; }
+hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0 8px; }
+h2.section { font-family: var(--mono); font-size: .74rem; font-weight: 400; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); margin: 48px 0 14px; }
+h2.section::before { content: "— "; }
+.tw { overflow-x: auto; margin: .6em 0 1em; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { text-align: left; vertical-align: top; padding: .55em .9em; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: none; }
+th { font-family: var(--mono); font-size: .68rem; font-weight: 400; text-transform: uppercase; letter-spacing: .14em; color: var(--mute); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.card td:last-child { min-width: 15em; }
+.card .tw { border: none; border-radius: 0; margin: .4em 0 .8em; background: transparent; }
+.card p strong:only-child { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+.focus-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin: 28px 0 2px; }
+footer p { margin: .3em 0; } .credit { color: var(--soft); } footer a { color: inherit; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--mute); font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; }
+@media print { body { padding: 0; font-size: 10.5pt; } .wrap { max-width: none; } .lead, .card, .tw, table { break-inside: avoid; } h2.section { break-after: avoid; } a { border: none; } }
+</style></head><body>
+<div class="wrap"><header class="masthead"><div class="eyebrow">Pre-market brief</div><h1>Situational Awareness</h1><div class="date">Wednesday, November 11, 2026</div></header>
+<section class="lead"><div class="eyebrow">Regime</div><p class="lead-text">Bear <span class='dot'>·</span> day 4 under the 200 <span class='dot'>·</span> potential bounce day 4 <span class='dot'>·</span> bounce since Nov 5 (+4.3% since Nov 5)</p><p class="lead-sub">Pre-market at 9:27 AM ET (vs the Tue close): QQQ +1.9% · SPY +0.9% · IWM +0.8% · DJI (via DIA) +0.2% · VIX 18.31 at 9:27 AM (Tue close 19.45)</p></section>
+<p class="item"><span class="label">DRIVER</span><br />
+*oil is pulling back, AI pulled back and then bouncing, leading market continue to bounce</p>
+<p class="item"><span class="label">CHARACTER</span></p>
+<ul>
+<li>market responds to good news (dropping oil price, geopolitical tension easing) and ignores / responds little and then forgot about bad news (J.H. affair, hot CPI)</li>
+<li>selective EP holding</li>
+<li>QQQ and IWM still in bear market territory but SPY and DJI neutral</li>
+</ul>
+<p class="item"><span class="label">THEMES</span></p>
+<ul>
+<li>ON: IHI (Medical devices) ★, ITB (Homebuilders) ★, FXI (China large caps) ★, XRT (Retail (EW)) ★, JETS (Airlines), OZEM (GLP-1 &amp; weight loss)</li>
+<li>OFF: SMH (Semiconductors), HACK (Cybersecurity), IGPT (AI &amp; next-gen software), WGMI (Bitcoin miners), MEME (Meme stocks)</li>
+</ul>
+<p class="item"><span class="label">CATALYSTS</span> · no major US data today · next: Existing Home Sales Thu 10:00 · 2 reporters over $20B today (see Earnings)</p>
+<hr class="rule">
+<p class="item"><span class="label">EXPOSURE</span> · <strong>Preservation mode · cash is king</strong></p>
+<p class="item"><span class="label">HUNTING</span><br />
+selected fresh EP and delayed EP</p>
+<p class="item"><span class="label">FOCUS</span><br />
+FOSL, RSKD</p>
+<p class="item"><span class="label">CURRENT POSITIONS</span></p>
+<h2 class="section">Today's Focus</h2>
+<h3 class="focus-title">FOSL · Fossil Group, Inc. — earnings</h3>
+<p><em>Other Consumer Specialties (Consumer Durables) · theme: — · IPO 1993</em></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Market cap</th>
+<th>Float</th>
+<th>Short interest</th>
+<th>Days to cover</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$465M</td>
+<td>56.0M</td>
+<td>5.5M (Oct 30, 2026)</td>
+<td>7.54</td>
+</tr>
+</tbody>
+</table></div>
+<p class="item"><span class="label">CATALYST</span> · <a href="https://www.tradingview.com/news/tradingview:82a6b95c134fd:0-fossil-group-fosl-raises-2026-outlook-after-q3-margin-expansion/" target="_blank" rel="noopener">Fossil Group (FOSL) Raises 2026 Outlook After Q3 Margin Expansion</a> <em>(earnings · Nov 10, 2026, 4:05 PM ET (after the close))</em></p>
+<p class="item"><span class="label">UPCOMING CATALYSTS</span></p>
+<ul>
+<li>~Mar 10, 2027 (estimated) · Q4 earnings</li>
+</ul>
+<h3 class="focus-title">RSKD · Riskified Ltd. — earnings</h3>
+<p><em>Packaged Software (Technology Services) · theme: Software (IGV) (guess) · IPO 2021</em></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Market cap</th>
+<th>Float</th>
+<th>Short interest</th>
+<th>Days to cover</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1.1B</td>
+<td>67.5M</td>
+<td>1.0M (Oct 30, 2026)</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table></div>
+<p class="item"><span class="label">CATALYST</span> · <a href="https://www.tradingview.com/news/business_wire:f088cfb0bac8a:0-riskified-reports-strong-third-quarter-of-2026-with-accelerating-revenue-and-gross-profit-growth/" target="_blank" rel="noopener">Riskified Reports Strong Third Quarter of 2026 with Accelerating Revenue and Gross Profit Growth</a> <em>(earnings · Nov 11, 2026, ~6:45 AM ET (before the open))</em></p>
+<p class="item"><span class="label">UPCOMING CATALYSTS</span></p>
+<ul>
+<li>~Mar 10, 2027 (estimated) · Q4 earnings</li>
+</ul>
+<h2 class="section">Overnight headlines</h2>
+<ul>
+<li>CoreWeave Q3 revenue +168% y/y to $3.66B, backlog up 138% to $132.5B; stock ~+13% pre-market · <em><a href="https://www.tipranks.com/news/u-s-stocks-rebound-on-neocloud-coreweaves-solid-earnings" target="_blank" rel="noopener">TipRanks</a></em></li>
+<li>CoreWeave raises 2026 revenue outlook to $13.0–13.3B and targets adjusted profitability in 1H 2028, easing debt worries · <em><a href="https://investing.com/news/economy-news/sp-500-nasdaq-futures-rise-after-coreweave-soothes-ai-spending-fears-5018288" target="_blank" rel="noopener">Reuters via Investing.com</a></em></li>
+<li>Nvidia ~+5% pre-market after falling nearly 10% at the start of the week; AMD, MU, INTC, SNDK also higher · <em><a href="https://qz.com/tech-stocks-rebound-coreweave-futures-nvidia-111126" target="_blank" rel="noopener">Quartz</a></em></li>
+<li>Tuesday's hotter-than-expected CPI keeps Fed rate-hike bets in focus; US bond market closed today for Veterans Day · <em><a href="https://www.investing.com/news/stock-market-news/us-stock-futures-tick-higher-after-wall-st-slips-on-hot-cpi-nvidia-losses-5017417" target="_blank" rel="noopener">Investing.com</a></em></li>
+<li>Asia: Kospi +2.6% (SK Hynix +5.4%, Samsung +3.6%), Nikkei +0.9%; Hang Seng −0.7% · <em><a href="https://qz.com/tech-stocks-rebound-coreweave-futures-nvidia-111126" target="_blank" rel="noopener">Quartz</a></em></li>
+<li>Brent edges up to about $92 as investors watch the Middle East; Stoxx 600 opened ~+0.7% · <em><a href="https://mlq.ai/news/nasdaq-futures-jump-as-coreweave-surges-13-and-european-stocks-rise-on-veterans-day/" target="_blank" rel="noopener">MLQ (citing Investing.com/CNBC)</a></em></li>
+</ul>
+<h2 class="section">Economic calendar · high importance (ET)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Event</th>
+<th>Actual</th>
+<th>Forecast</th>
+<th>Previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thu Nov 12</td>
+<td>10:00</td>
+<td>Existing Home Sales</td>
+<td>–</td>
+<td>3.85M</td>
+<td>3.99M</td>
+</tr>
+<tr>
+<td>Fri Nov 13</td>
+<td>8:30</td>
+<td>PPI MoM</td>
+<td>–</td>
+<td>0.4%</td>
+<td>1.3%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="section">Earnings today · 62 reporting (market cap ≥ $300M; <mark>highlighted</mark> = over $20B)</h2>
+<ul>
+<li><strong>Before the open, already reported (7):</strong> RUM, AADX, FLNG, RSKD, ODD, INMD, ITG</li>
+<li><strong>Before the open, not out yet (4):</strong> GIB, BGSI, NYAX, AEBI</li>
+<li><strong>After the close (20):</strong> <mark>FNV $49B</mark> · <mark>VYLR $48B</mark> · TTEK, CAE, CTVA, OR, UGP, ENS, ECO, DGII +10 more</li>
+<li><strong>Time not set (31):</strong> FRHC, DDS, NIO, ERAS, GGAL, TEO +25 more</li>
+</ul>
+<p><strong>Rest of the week</strong> (largest first)</p>
+<ul>
+<li>Thu Nov 12 (106): CSCO, AMAT, BN, NU, NBIS, EC, WSM, CBRS +98 more</li>
+<li>Fri Nov 13 (9): MUFG, SMFG, MFG, INBX, USAS, LAC, RMIX, SGML +1 more</li>
+</ul>
+<h2 class="section">Pre-market movers · 30 up / 2 down</h2>
+<section class="card"><div class="eyebrow">±6.9%+, pre-market vol ≥ 100K, market cap ≥ $300M · data 9:27 AM ET</div><p><strong>Up</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Pre-mkt chg</th>
+<th>Pre-mkt vol</th>
+<th>Mkt cap</th>
+<th>Industry</th>
+<th>Earnings?</th>
+<th>Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BRAI</td>
+<td>+24.7%</td>
+<td>925K</td>
+<td>$0.4B</td>
+<td>Packaged Software</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/tradingview:712310c1536ff:0-braiin-limited-brai-aria-wins-2026-enterprise-ready-ai-platform-award/" target="_blank" rel="noopener">Braiin Limited (BRAI) ARIA Wins 2026 Enterprise-Ready AI Platform Award</a></td>
+</tr>
+<tr>
+<td>FOSL</td>
+<td>+23.8%</td>
+<td>265K</td>
+<td>$0.5B</td>
+<td>Other Consumer Specialties</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/urn:summary_document_transcript:quartr.com:4561119:0-fosl-q3-growth-and-margin-gains-lifted-fy26-guidance-and-reinforced-the-turnaround/" target="_blank" rel="noopener">FOSL: Q3 growth and margin gains lifted FY26 guidance and reinforced the turnaround</a></td>
+</tr>
+<tr>
+<td>GEVO</td>
+<td>+23.0%</td>
+<td>708K</td>
+<td>$0.3B</td>
+<td>Chemicals: Specialty</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/stockstory:a27adfa5c094b:0-gevo-q3-2026-deep-dive-carbon-credits-and-operational-efficiency-drive-profit-turnaround/" target="_blank" rel="noopener">GEVO Q3 2026 deep dive: carbon credits and operational efficiency drive profit turnaround</a></td>
+</tr>
+<tr>
+<td>RSKD</td>
+<td>+20.8%</td>
+<td>476K</td>
+<td>$1.1B</td>
+<td>Packaged Software</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/DJN_DN20261111004162:0-riskified-shares-gain-on-higher-outlook-3q-revenue/" target="_blank" rel="noopener">Riskified Shares Gain on Higher Outlook, 3Q Revenue</a></td>
+</tr>
+<tr>
+<td>SATL</td>
+<td>+19.0%</td>
+<td>964K</td>
+<td>$0.6B</td>
+<td>Aerospace &amp; Defense</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/DJN_DN20261111004839:0-satellogic-shares-gain-on-sharply-higher-3q-results/" target="_blank" rel="noopener">Satellogic Shares Gain on Sharply Higher 3Q Results</a></td>
+</tr>
+<tr>
+<td>PEPG</td>
+<td>+14.3%</td>
+<td>739K</td>
+<td>$0.3B</td>
+<td>Biotechnology</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/tradingview:efb1d82c5c503:0-pepgen-inc-stock-12-month-price-target-raised-to-11-69-implies-389-upside/" target="_blank" rel="noopener">PepGen Inc. Stock 12-Month Price Target Raised to $11.69, Implies 389% Upside</a></td>
+</tr>
+<tr>
+<td>CRWV</td>
+<td>+11.8%</td>
+<td>10.8M</td>
+<td>$27B</td>
+<td>Packaged Software</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/DJN_DN20261111004856:0-coreweave-price-target-cut-to-100-00-share-from-150-00-by-evercore-isi-group/" target="_blank" rel="noopener">CoreWeave Price Target Cut to $100.00/Share From $150.00 by Evercore ISI Group</a></td>
+</tr>
+<tr>
+<td>NBIS</td>
+<td>+11.3%</td>
+<td>2.6M</td>
+<td>$36B</td>
+<td>Packaged Software</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/benzinga:3afb7a8cb094b:0-why-is-nebius-group-stock-soaring-wednesday/" target="_blank" rel="noopener">Why Is Nebius Group Stock Soaring Wednesday?</a></td>
+</tr>
+<tr>
+<td>AXTI</td>
+<td>+10.0%</td>
+<td>428K</td>
+<td>$2.6B</td>
+<td>Electronic Production Equipment</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>LITE</td>
+<td>+9.8%</td>
+<td>147K</td>
+<td>$53B</td>
+<td>Electrical Products</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/DJN_DN20261111003931:0-why-sandisk-and-lumentum-are-leading-the-ai-comeback-barrons-com/" target="_blank" rel="noopener">Why Sandisk and Lumentum Are Leading the AI Comeback — Barrons.com</a></td>
+</tr>
+<tr>
+<td>COHR</td>
+<td>+9.8%</td>
+<td>296K</td>
+<td>$42B</td>
+<td>Semiconductors</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/DJN_DN20261110008469:0-amd-and-coherent-what-the-biggest-gainers-since-the-midterms-selloff-say-about-the-ai-trade-barrons-com/" target="_blank" rel="noopener">AMD and Coherent: What the Biggest Gainers Since the Midterms Selloff Say About the AI Trade — Barrons.com</a></td>
+</tr>
+<tr>
+<td>AEHR</td>
+<td>+9.5%</td>
+<td>126K</td>
+<td>$2.0B</td>
+<td>Electronic Production Equipment</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FPS</td>
+<td>+9.4%</td>
+<td>246K</td>
+<td>$6.5B</td>
+<td>Electrical Products</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/tradingview:182c3fcaa7f11:0-fps-q1-27-earnings-eps-estimate-is-0-20-usd/" target="_blank" rel="noopener">FPS Q1'27 Earnings: EPS estimate is 0.20 USD</a></td>
+</tr>
+<tr>
+<td>CIFR</td>
+<td>+8.9%</td>
+<td>1.7M</td>
+<td>$3.0B</td>
+<td>Data Processing Services</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/DJN_DN20261110012042:0-cipher-digital-price-target-cut-to-10-00-share-from-12-00-by-jefferies/" target="_blank" rel="noopener">Cipher Digital Price Target Cut to $10.00/Share From $12.00 by Jefferies</a></td>
+</tr>
+<tr>
+<td>MRVL</td>
+<td>+8.8%</td>
+<td>1.1M</td>
+<td>$135B</td>
+<td>Semiconductors</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Down</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Pre-mkt chg</th>
+<th>Pre-mkt vol</th>
+<th>Mkt cap</th>
+<th>Industry</th>
+<th>Earnings?</th>
+<th>Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LWLG</td>
+<td>-16.2%</td>
+<td>519K</td>
+<td>$0.7B</td>
+<td>Chemicals: Specialty</td>
+<td>earnings</td>
+<td><a href="https://www.tradingview.com/news/urn:summary_document_transcript:quartr.com:4561187:0-lwlg-foxconn-system-demo-advances-polymer-optics-foundry-delays-move-volume-production-to-2028/" target="_blank" rel="noopener">LWLG: Foxconn system demo advances polymer optics; foundry delays move volume production to 2028</a></td>
+</tr>
+<tr>
+<td>HGTY</td>
+<td>-7.1%</td>
+<td>746K</td>
+<td>$5.8B</td>
+<td>Property/Casualty Insurance</td>
+<td>—</td>
+<td><a href="https://www.tradingview.com/news/DJN_DN20261111003371:0-hagerty-shares-sink-after-pricing-increasing-size-of-secondary-offering/" target="_blank" rel="noopener">Hagerty Shares Sink After Pricing, Increasing Size of Secondary Offering</a></td>
+</tr>
+</tbody>
+</table></div></section>
+<footer><p class="credit">Inspired by Stockbee (<a href="https://x.com/PradeepBonde" target="_blank" rel="noopener">@PradeepBonde</a>), J Law (<a href="https://x.com/JLawStock" target="_blank" rel="noopener">@JLawStock</a>), Jeff Sun (<a href="https://x.com/jfsrev" target="_blank" rel="noopener">@jfsrev</a>) and Clement Ang (<a href="https://x.com/Clement_Ang17" target="_blank" rel="noopener">@Clement_Ang17</a>)</p><p>Data: Massive (daily prices: phase, bounce, themes) · TradingView (pre-market quotes, calendar, earnings, stock news) · overnight headlines from the linked sources · Informational only, not investment advice.</p></footer></div>
+</body></html>
