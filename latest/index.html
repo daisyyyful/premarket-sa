@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Situational Awareness 11/25</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root { --paper:#F5F3EF; --card:#FFFFFF; --ink:#16140F; --soft:#4A463E; --mute:#8C8577; --line:#E3DED5; --accent:#56B0E0; --accent-ink:#2A7FB0; --tint:#E8F5FC;
+  --sans:"DM Sans","Helvetica Neue","Segoe UI",system-ui,sans-serif; --mono:"DM Mono","IBM Plex Mono",ui-monospace,Consolas,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; }
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+img.chart { max-width: 100%; height: auto; display: block; margin: 8px 0 14px; border-radius: 6px; }
+.masthead .eyebrow { margin-bottom: 14px; }
+h1 { font-weight: 700; font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.04; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.date { color: var(--mute); font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; margin-top: 10px; }
+.eyebrow { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); }
+.eyebrow::before { content: "— "; }
+.lead { margin: 36px 0 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; }
+.lead-text { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; margin: 10px 0 8px; }
+.lead-text .dot { color: var(--mute); font-weight: 400; }
+.lead-sub { font-family: var(--mono); font-size: .8rem; color: var(--soft); margin: 0; }
+p { margin: .6em 0; }
+.item { margin: 1.5em 0 .3em; }
+.label { font-family: var(--mono); font-size: .78rem; font-weight: 500; letter-spacing: .1em; color: var(--accent-ink); margin-right: .2em; }
+strong { font-weight: 700; }
+em { font-style: normal; }
+ul { margin: .3em 0 .6em; padding-left: 1.2em; } li { margin: .15em 0; } li::marker { color: var(--mute); }
+li > p { margin: 0; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+a:hover { border-bottom-color: var(--accent); }
+mark { background: var(--tint); color: var(--ink); font-weight: 600; padding: .05em .35em; border-radius: 4px; }
+hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0 8px; }
+h2.section { font-family: var(--mono); font-size: .74rem; font-weight: 400; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); margin: 48px 0 14px; }
+h2.section::before { content: "— "; }
+.tw { overflow-x: auto; margin: .6em 0 1em; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { text-align: left; vertical-align: top; padding: .55em .9em; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: none; }
+th { font-family: var(--mono); font-size: .68rem; font-weight: 400; text-transform: uppercase; letter-spacing: .14em; color: var(--mute); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.card td:last-child { min-width: 15em; }
+.card .tw { border: none; border-radius: 0; margin: .4em 0 .8em; background: transparent; }
+.card p strong:only-child { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+.focus-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin: 28px 0 2px; }
+footer p { margin: .3em 0; } .credit { color: var(--soft); } footer a { color: inherit; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--mute); font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; }
+@media print { body { padding: 0; font-size: 10.5pt; } .wrap { max-width: none; } .lead, .card, .tw, table { break-inside: avoid; } h2.section { break-after: avoid; } a { border: none; } }
+</style></head><body>
+<div class="wrap"><header class="masthead"><div class="eyebrow">Pre-market brief</div><h1>Situational Awareness</h1><div class="date">Wednesday, November 25, 2026</div></header>
+<section class="lead"><div class="eyebrow">Regime</div><p class="lead-text">QQQ Bear <span class='dot'>·</span> day 14 under the 200 <span class='dot'>·</span> potential bounce day 3 <span class='dot'>·</span> bounce since Nov 20 (+4.9% since Nov 20)</p><p class="lead-sub">Other indexes: SPY Bear · IWM Bear · DJI Bear</p><p class="lead-sub">Pre-market at 9:15 AM ET (vs the Tue close): QQQ -3.2% · SPY -2.1% · IWM -1.4% · DJI (via DIA) -1.4% · VIX 31.56 at 9:15 AM (Tue close 26.37)</p></section>
+<p class="item"><span class="label">OVERNIGHT</span> · since the Tue close</p>
+<ul>
+<li>Chip / AI-infrastructure selloff deepened: at 9:15 pre-market NVDA -5.5%, AMD -6.6%, MU -8.8%, MRVL -6.3%, SNDK -8.8%, DELL -7.5%, CRWV -9.6% (after ADI -17%, TXN -11%, MU -11% on Tuesday) · <em><a href="https://journalarta.com/en/2026/11/25/stock-market-today-nasdaq-sp-500-and-dow-futures-slide-as-ai-chip-selloff-deepens/" target="_blank" rel="noopener">Massive minute bars; Tuesday closes: JournalArta</a></em></li>
+<li>Reuters: US could unveil new tariffs on imports from 16 major trading partners after an excess-capacity probe · <em><a href="https://whbl.com/2026/11/25/nasdaq-futures-slide-over-2-on-fresh-us-tariff-concerns-inflation-data-in-focus/" target="_blank" rel="noopener">Reuters via WHBL</a></em></li>
+<li>Fed funds futures price a 97% chance of a December rate hike (63% for another in January); Oct minutes: most regional boards favored raising · <em><a href="https://whbl.com/2026/11/25/nasdaq-futures-slide-over-2-on-fresh-us-tariff-concerns-inflation-data-in-focus/" target="_blank" rel="noopener">Reuters via WHBL; Stocktwits (TradingView)</a></em></li>
+<li>TrendForce lowered its DRAM pricing forecast; BNP Paribas downgraded Micron to Neutral from Outperform and cut its price target to $775 from $1,700 (-54%) · <em><a href="https://www.tradingview.com/news/stocktwits:93140fcda094b:0-mu-skhy-sndk-stocks-in-focus-after-trendforce-lowers-dram-pricing-forecast/" target="_blank" rel="noopener">Stocktwits; BNP: GuruFocus (TradingView news)</a></em></li>
+<li>8:30 data: growth came in hot (GDP 4.3% vs 3.5%, income +0.7%) while core PCE held at +0.3% a month - roughly a 3.6% annual pace, so inflation isn't cooling. Nothing here gives the Fed a reason to step back from the December hike the market already prices (~97%). Durable goods (+0.2% vs +0.6%) and spending (+0.3% vs +0.4%) were a touch soft, but not enough to change that. QQQ didn't bounce in pre-market after the data (QQQ -3.1% at 8:45, -3.2% at 9:15) and the selling spread to more names, so today's drop is about AI / chips, not the macro numbers - the data just took away a possible relief catalyst.</li>
+<li>After the data, selling widened: US stocks over $300M down 6.9%+ pre-market went from 22 at 8:45 to 62 at 9:06 · <em><a href="https://www.tradingview.com/screener/" target="_blank" rel="noopener">TradingView screener</a></em></li>
+<li><strong>Global:</strong> <mark>Japan (Nikkei 225) -2.8%</mark> · <mark>Korea (KOSPI) -6.2%</mark> · <mark>Taiwan (TAIEX) -4.8%</mark> · Hong Kong (Hang Seng) -1.1% · <mark>China (Shanghai) -2.0%</mark> · Germany (DAX) -0.6% · France (CAC 40) +0.3% · UK (FTSE 100) +0.0% · Europe (STOXX 600) -0.3%<ul>
+<li>KOSPI -6.2%, back below 5,000, as Samsung and SK hynix slid (SK hynix about -11%) after Micron's drop · <em><a href="https://www.koreajoongangdaily.com/business/kospi-plunges-back-below-5000-as-chip-selloff-returns/12990750" target="_blank" rel="noopener">Korea JoongAng Daily</a></em></li>
+<li>Taiwan -4.8% as AI fears sank TSMC; Taiwan stocks near their worst month since 2008 · <em><a href="https://www.bloomberg.com/news/articles/2026-11-25/jensen-huang-boost-fades-fast-as-taiwan-stocks-tumble-8" target="_blank" rel="noopener">Bloomberg</a></em></li>
+<li>Nikkei -2.8% to 57,011 as Asia tracked Tuesday's US chip selloff · <em><a href="https://journalarta.com/en/2026/11/25/stock-market-today-nasdaq-sp-500-and-dow-futures-slide-as-ai-chip-selloff-deepens/" target="_blank" rel="noopener">JournalArta</a></em></li>
+</ul>
+</li>
+<li><strong>Cross-asset:</strong> Oil $82.42 +1.0% · 10Y yield 4.840% -7.8bp · Dollar (DXY) 103.95 +0.1% · Bitcoin $58,271 -2.5%</li>
+</ul>
+<p class="item"><span class="label">DRIVER</span><br />
+Driven by AI drag (DRAM price forecast, MU target price lowered, AI-chip selloff)</p>
+<p class="item"><span class="label">CHARACTER</span></p>
+<ul>
+<li>still in defensive mode with high volatility</li>
+<li>concerns across semiconductor didn't totally ease after the initial pump upon Jensens' return as NVDA CEO; market concerns over high investment cost and cash burn still persist</li>
+<li>
+<p>few gap ups, and gap ups from recent days tend NOT to follow through</p>
+</li>
+<li>
+<p><em>market is very sensitive for news related to AI, especially to the concerns and potential downside</em></p>
+</li>
+<li><em>earnings performance this week: not impressive overall, DELL fell despite guidance raise</em></li>
+<li><em>sectors holding up the best are: consumer staples, utilities, healthcare; within tech, cyber security is doing better than the rest</em></li>
+</ul>
+<p class="item"><span class="label">THEMES</span></p>
+<ul>
+<li>ON: XBI (Biotech (EW)) ★, XRT (Retail (EW)) ★, KRE (Regional banks) ★, HACK (Cybersecurity), ITB (Homebuilders), IHI (Medical devices), FFTY (IBD 50 leaders)</li>
+<li>OFF: MEME (Meme stocks), IBIT (Bitcoin), TAN (Solar), WGMI (Bitcoin miners), MSOS (Cannabis)</li>
+</ul>
+<p class="item"><span class="label">CATALYSTS</span> · GDP Growth Rate QoQ 2nd Est (Q3) 8:30; Core PCE Price Index MoM (Oct) 8:30; Personal Income MoM (Oct) 8:30; Personal Spending MoM (Oct) 8:30; Durable Goods Orders MoM (Oct) 8:30 · 1 reporters over $20B today (see Earnings)</p>
+<hr class="rule">
+<p class="item"><span class="label">EXPOSURE</span> · <strong>Preservation mode · cash is king</strong> · ⚠️ high VIX makes swing trading harder (VIX 31.6 at 9:15 AM)</p>
+<p class="item"><span class="label">HUNTING</span> · SOH</p>
+<p class="item"><span class="label">FOCUS</span> · SOH</p>
+<p class="item"><span class="label">CURRENT POSITIONS</span><br />
+LLY 50% remaining, NKE 100% remaining, UNH 20% remaining, INSM sold the remaining on M&amp;A news</p>
+<h2 class="section">Economic calendar · high importance (ET)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Event</th>
+<th>Actual</th>
+<th>Forecast</th>
+<th>Previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wed Nov 25</td>
+<td>8:30</td>
+<td>GDP Growth Rate QoQ 2nd Est (Q3)</td>
+<td><strong>4.3%</strong></td>
+<td>3.5%</td>
+<td>1.5%</td>
+</tr>
+<tr>
+<td>Wed Nov 25</td>
+<td>8:30</td>
+<td>Core PCE Price Index MoM (Oct)</td>
+<td><strong>0.3%</strong></td>
+<td>0.3%</td>
+<td>0.3%</td>
+</tr>
+<tr>
+<td>Wed Nov 25</td>
+<td>8:30</td>
+<td>Personal Income MoM (Oct)</td>
+<td><strong>0.7%</strong></td>
+<td>0.4%</td>
+<td>0.3%</td>
+</tr>
+<tr>
+<td>Wed Nov 25</td>
+<td>8:30</td>
+<td>Personal Spending MoM (Oct)</td>
+<td><strong>0.3%</strong></td>
+<td>0.4%</td>
+<td>0.6%</td>
+</tr>
+<tr>
+<td>Wed Nov 25</td>
+<td>8:30</td>
+<td>Durable Goods Orders MoM (Oct)</td>
+<td><strong>0.2%</strong></td>
+<td>0.6%</td>
+<td>1.8%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="section">Earnings today · 9 reporting (market cap ≥ $300M; <mark>highlighted</mark> = over $20B)</h2>
+<ul>
+<li><strong>After the Tue close, reported (12):</strong> <mark>DELL $188B</mark> · <mark>ADSK $53B</mark> · <mark>WDAY $43B</mark> · <mark>HPQ $25B</mark> · NTNX, URBN, BBAR, AMBA, CLSK, GDRX, QFIN, NOAH</li>
+<li><strong>Before the open, already reported (7):</strong> <mark>DE $165B</mark> · LI, BZ, GDS, IMKTA, HDL, GOTU</li>
+<li><strong>Before the open, not out yet (0):</strong> none</li>
+<li><strong>After the close (2):</strong> BMA, FINV</li>
+<li><strong>Time not set (0):</strong> none</li>
+</ul>
+<p><strong>Reported since the last close, over $20B · headline</strong></p>
+<ul>
+<li><strong>DELL</strong> · —</li>
+<li><strong>ADSK</strong> · <a href="https://www.tradingview.com/news/stocktwits:9f256ff41094b:0-workday-autodesk-tumble-after-beat-and-raise-quarters-retail-turns-bullish/" target="_blank" rel="noopener">Workday, Autodesk Tumble After Beat And Raise Quarters — Retail Turns Bullish</a></li>
+<li><strong>WDAY</strong> · <a href="https://www.tradingview.com/news/stocktwits:9f256ff41094b:0-workday-autodesk-tumble-after-beat-and-raise-quarters-retail-turns-bullish/" target="_blank" rel="noopener">Workday, Autodesk Tumble After Beat And Raise Quarters — Retail Turns Bullish</a></li>
+<li><strong>HPQ</strong> · <a href="https://www.tradingview.com/news/DJN_DN20261124008737:0-hp-says-component-costs-pressuring-profitability-market-talk/" target="_blank" rel="noopener">HP Says Component Costs Pressuring Profitability — Market Talk</a></li>
+<li><strong>DE</strong> · <a href="https://www.tradingview.com/news/seekingalpha:2b9c787b8094b:0-deere-profit-misses-estimates-as-farm-weakness-persists/" target="_blank" rel="noopener">Deere profit misses estimates as farm weakness persists</a></li>
+</ul>
+<p><strong>Rest of the week</strong> (largest first)</p>
+<footer><p class="credit">Inspired by Stockbee (<a href="https://x.com/PradeepBonde" target="_blank" rel="noopener">@PradeepBonde</a>), Sean Sharpe (<a href="https://x.com/BornInvestor" target="_blank" rel="noopener">@BornInvestor</a>), J Law (<a href="https://x.com/JLawStock" target="_blank" rel="noopener">@JLawStock</a>), Jeff Sun (<a href="https://x.com/jfsrev" target="_blank" rel="noopener">@jfsrev</a>) and Clement Ang (<a href="https://x.com/Clement_Ang17" target="_blank" rel="noopener">@Clement_Ang17</a>)</p><p>Data: Massive (daily prices: phase, bounce, themes) · TradingView (pre-market quotes, calendar, earnings, stock news) · overnight headlines from the linked sources · Informational only, not investment advice.</p></footer></div>
+</body></html>

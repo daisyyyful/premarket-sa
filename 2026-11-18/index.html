@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Situational Awareness 11/18</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root { --paper:#F5F3EF; --card:#FFFFFF; --ink:#16140F; --soft:#4A463E; --mute:#8C8577; --line:#E3DED5; --accent:#56B0E0; --accent-ink:#2A7FB0; --tint:#E8F5FC;
+  --sans:"DM Sans","Helvetica Neue","Segoe UI",system-ui,sans-serif; --mono:"DM Mono","IBM Plex Mono",ui-monospace,Consolas,monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1A1916; --card:#23221E; --ink:#F2EFE9; --soft:#CFC9BE; --mute:#9A9284; --line:#36332D; --accent:#8FD0F5; --accent-ink:#8FD0F5; --tint:#1C3140; color-scheme:dark; }
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+img.chart { max-width: 100%; height: auto; display: block; margin: 8px 0 14px; border-radius: 6px; }
+.masthead .eyebrow { margin-bottom: 14px; }
+h1 { font-weight: 700; font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.04; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.date { color: var(--mute); font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; margin-top: 10px; }
+.eyebrow { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); }
+.eyebrow::before { content: "— "; }
+.lead { margin: 36px 0 28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; }
+.lead-text { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; margin: 10px 0 8px; }
+.lead-text .dot { color: var(--mute); font-weight: 400; }
+.lead-sub { font-family: var(--mono); font-size: .8rem; color: var(--soft); margin: 0; }
+p { margin: .6em 0; }
+.item { margin: 1.5em 0 .3em; }
+.label { font-family: var(--mono); font-size: .78rem; font-weight: 500; letter-spacing: .1em; color: var(--accent-ink); margin-right: .2em; }
+strong { font-weight: 700; }
+em { font-style: normal; }
+ul { margin: .3em 0 .6em; padding-left: 1.2em; } li { margin: .15em 0; } li::marker { color: var(--mute); }
+li > p { margin: 0; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+a:hover { border-bottom-color: var(--accent); }
+mark { background: var(--tint); color: var(--ink); font-weight: 600; padding: .05em .35em; border-radius: 4px; }
+hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0 8px; }
+h2.section { font-family: var(--mono); font-size: .74rem; font-weight: 400; text-transform: uppercase; letter-spacing: .2em; color: var(--mute); margin: 48px 0 14px; }
+h2.section::before { content: "— "; }
+.tw { overflow-x: auto; margin: .6em 0 1em; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { text-align: left; vertical-align: top; padding: .55em .9em; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: none; }
+th { font-family: var(--mono); font-size: .68rem; font-weight: 400; text-transform: uppercase; letter-spacing: .14em; color: var(--mute); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.card td:last-child { min-width: 15em; }
+.card .tw { border: none; border-radius: 0; margin: .4em 0 .8em; background: transparent; }
+.card p strong:only-child { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+.focus-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin: 28px 0 2px; }
+footer p { margin: .3em 0; } .credit { color: var(--soft); } footer a { color: inherit; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--mute); font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; }
+@media print { body { padding: 0; font-size: 10.5pt; } .wrap { max-width: none; } .lead, .card, .tw, table { break-inside: avoid; } h2.section { break-after: avoid; } a { border: none; } }
+</style></head><body>
+<div class="wrap"><header class="masthead"><div class="eyebrow">Pre-market brief</div><h1>Situational Awareness</h1><div class="date">Wednesday, November 18, 2026</div></header>
+<section class="lead"><div class="eyebrow">Regime</div><p class="lead-text">QQQ Bear <span class='dot'>·</span> day 9 under the 200 <span class='dot'>·</span> potential bounce day 9 <span class='dot'>·</span> bounce since Nov 5 (+1.5% since Nov 5)</p><p class="lead-sub">Other indexes: SPY Correction · IWM Bear · DJI Bear</p><p class="lead-sub">Pre-market at 9:35 AM ET (vs the Tue close): QQQ +0.5% · SPY +0.2% · IWM -0.3% · DJI (via DIA) -0.1% · VIX 24.32 at 9:35 AM (Tue close 25.45)</p><p class="lead-sub">Possible bounce day</p></section>
+<p class="item"><span class="label">OVERNIGHT</span> · since the Tue close</p>
+<ul>
+<li>Nvidia Q3 revenue $115.8B (+103% y/y) vs $109.0B est., adj. EPS $2.68 vs $2.48; Q4 guide $130B vs ~$125B consensus · <em><a href="https://www.tipranks.com/news/stock-market-today-nov-18-nvidias-strong-results-lift-market-sentiment" target="_blank" rel="noopener">TipRanks / Reuters</a></em></li>
+<li>Nvidia board <strong>declined to bring</strong> back ex-CEO Jensen Huang; NVDA ~+3.7% pre-market · <em><a href="https://www.investing.com/news/economy-news/nasdaq-futures-jump-as-nvidia-forecast-lifts-ai-trade-ahead-of-anthropic-pricing-5035347" target="_blank" rel="noopener">Reuters via Investing.com</a></em></li>
+<li>October FOMC minutes at 2 pm ET; <strong>markets price ~a 25bp December hike</strong>, 10-yr ~5.15% early · <em><a href="https://www.bnnbloomberg.ca/markets/2026/11/18/us-futures-point-higher-led-by-rebound-for-nvidia/" target="_blank" rel="noopener">BNN Bloomberg</a></em></li>
+<li><strong>Target raised FY26 outlook on best sales growth in ~5 yrs but fell ~3%; TJX raised outlook, +7.8% ·</strong> <em><a href="https://www.rttnews.com/3715927/morning-market-movers-gp-ardt-gmm-cue-lsf-see-big-swings.aspx" target="_blank" rel="noopener">RTTNews / BNN Bloomberg</a></em></li>
+<li>Anthropic IPO prices later today at a reported valuation of up to $1.4T · <em><a href="https://www.investing.com/news/economy-news/nasdaq-futures-jump-as-nvidia-forecast-lifts-ai-trade-ahead-of-anthropic-pricing-5035347" target="_blank" rel="noopener">Reuters via Investing.com</a></em></li>
+<li>Oil: WTI ~$84-85, Brent ~$92-93 after API showed a 5.28M bbl crude build · <em><a href="https://www.tipranks.com/news/stock-market-today-nov-18-nvidias-strong-results-lift-market-sentiment" target="_blank" rel="noopener">TipRanks</a></em></li>
+<li><strong>Global:</strong> Japan (Nikkei 225) +0.3% · <mark>Korea (KOSPI) +2.0%</mark> · Taiwan (TAIEX) +0.3% · Hong Kong (Hang Seng) -0.9% · China (Shanghai) +0.1% · Germany (DAX) -0.4% · France (CAC 40) -0.2% · UK (FTSE 100) -0.6% · Europe (STOXX 600) -0.4%</li>
+<li><strong>Cross-asset:</strong> Oil $83.95 -0.5% · 10Y yield 5.091% -2.2bp · Dollar (DXY) 103.82 +0.2% · Bitcoin $63,863 -1.6%</li>
+</ul>
+<p class="item"><span class="label">DRIVER</span><br />
+Slightly driven by oil and fear, AI dragging</p>
+<p class="item"><span class="label">CHARACTER</span></p>
+<ul>
+<li>bounce / chop action right now, NVDA had good earnings, but the pop seems weak, may need 1-2 more days to see;</li>
+<li>healthcare and consumer pulling back, need to watch if that holds; if doesn't and no obvious inflow to other sectors, this may lead to a market wide-weak phase</li>
+<li>also noted that TGT LOW had slightly beat in earnings (TGT better), although eps beat mostly come from tariff refund, also HD didn't react well to earnings yesterday, need to watch next 1-2 days to confirm</li>
+<li>
+<p>market is on defensive mode, speculative assets (BTC) off, even quality catalyst can fade</p>
+<ul>
+<li><em>more negative reactions than positive reactions, slightly good earnings are not rewarded, and may get dragged down by the market</em></li>
+<li><em>EP (gap ups) not holding up well, although it tend to have a 1-3 day follow through when the broader market bounces after a drop ?</em></li>
+</ul>
+</li>
+</ul>
+<p class="item"><span class="label">THEMES</span></p>
+<ul>
+<li>ON: JETS (Airlines), IHI (Medical devices), OZEM (GLP-1 &amp; weight loss), IYT (Transports), XRT (Retail (EW))</li>
+<li>FADING: GDX (Gold miners)  <em>(top-5 RS rank but RS ▼)</em></li>
+<li>OFF: TAN (Solar), MEME (Meme stocks), WGMI (Bitcoin miners), IBIT (Bitcoin), MSOS (Cannabis)</li>
+</ul>
+<p class="item"><span class="label">CATALYSTS</span> · Housing Starts 8:30; Building Permits Prel 8:30 · 6 reporters over $20B today (see Earnings)</p>
+<hr class="rule">
+<p class="item"><span class="label">EXPOSURE</span> · <strong>Preservation mode · cash is king</strong></p>
+<p class="item"><span class="label">HUNTING</span> · SOH</p>
+<p class="item"><span class="label">FOCUS</span> · SOH</p>
+<p class="item"><span class="label">CURRENT POSITIONS</span><br />
+LLY 50% remaining, INSM 2/3 remaining, NKE 100% remaining, UNH 20% remaining (cut 80% slightly above entry price at the catalyst-based gap down), stopped out on APP (DEP) and CGON (EP day entry)</p>
+<h2 class="section">Economic calendar · high importance (ET)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Event</th>
+<th>Actual</th>
+<th>Forecast</th>
+<th>Previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wed Nov 18</td>
+<td>8:30</td>
+<td>Housing Starts</td>
+<td><strong>1.309M</strong></td>
+<td>1.245M</td>
+<td>1.191M</td>
+</tr>
+<tr>
+<td>Wed Nov 18</td>
+<td>8:30</td>
+<td>Building Permits Prel</td>
+<td><strong>1.295M</strong></td>
+<td>1.377M</td>
+<td>1.4M</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="section">Earnings today · 29 reporting (market cap ≥ $300M; <mark>highlighted</mark> = over $20B)</h2>
+<ul>
+<li><strong>After the Tue close, reported (9):</strong> <mark>NVDA $3,925B</mark> · ZTO, DLB, CAAP, GBDC, LZB, IIIV, GLAD, AUNA</li>
+<li><strong>Before the open, already reported (14):</strong> <mark>TJX $148B</mark> · <mark>LOW $128B</mark> · <mark>TGT $73B</mark> · GLBE, HAFN, GLNG, ZIM, BLSH, PONY, JJSF, BRBR +3 more</li>
+<li><strong>Before the open, not out yet (0):</strong> none</li>
+<li><strong>After the close (13):</strong> <mark>PANW $264B</mark> · <mark>P $36B</mark> · WWD, SQM, UGI, SNEX, CPA, NJR, JOYY, KLIC +3 more</li>
+<li><strong>Time not set (2):</strong> <mark>CPRT $29B</mark> · GORO</li>
+</ul>
+<p><strong>Reported since the last close, over $20B · headline</strong></p>
+<ul>
+<li><strong>NVDA</strong> · —</li>
+<li><strong>TJX</strong> · —</li>
+<li><strong>LOW</strong> · —</li>
+<li><strong>TGT</strong> · —</li>
+</ul>
+<p><strong>Rest of the week</strong> (largest first)</p>
+<ul>
+<li>Thu Nov 19 (30): WMT, BABA, PDD, INTU, NTES, ROST, KEYS, WSM +22 more</li>
+<li>Fri Nov 20 (7): BSP, BJ, FRO, VFS, BKE, RLX, WRD</li>
+</ul>
+<footer><p class="credit">Inspired by Stockbee (<a href="https://x.com/PradeepBonde" target="_blank" rel="noopener">@PradeepBonde</a>), Sean Sharpe (<a href="https://x.com/BornInvestor" target="_blank" rel="noopener">@BornInvestor</a>), J Law (<a href="https://x.com/JLawStock" target="_blank" rel="noopener">@JLawStock</a>), Jeff Sun (<a href="https://x.com/jfsrev" target="_blank" rel="noopener">@jfsrev</a>) and Clement Ang (<a href="https://x.com/Clement_Ang17" target="_blank" rel="noopener">@Clement_Ang17</a>)</p><p>Data: Massive (daily prices: phase, bounce, themes) · TradingView (pre-market quotes, calendar, earnings, stock news) · overnight headlines from the linked sources · Informational only, not investment advice.</p></footer></div>
+</body></html>
